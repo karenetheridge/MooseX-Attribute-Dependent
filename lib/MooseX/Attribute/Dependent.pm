@@ -1,5 +1,7 @@
 package MooseX::Attribute::Dependent;
+
 # ABSTRACT: Restrict attributes based on values of other attributes
+
 use Moose ();
 use Moose::Exporter;
 use Moose::Util::MetaRole;

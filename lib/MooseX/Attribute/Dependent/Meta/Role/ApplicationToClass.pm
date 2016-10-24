@@ -1,4 +1,5 @@
 package MooseX::Attribute::Dependent::Meta::Role::ApplicationToClass;
+
 use Moose::Role;
 
 around apply => sub {

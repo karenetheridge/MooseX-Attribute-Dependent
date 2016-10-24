@@ -1,4 +1,5 @@
 package MooseX::Attribute::Dependent::Meta::Role::Role;
+
 use Moose::Role;
 
 sub composition_class_roles {

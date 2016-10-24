@@ -1,4 +1,5 @@
 package MooseX::Attribute::Dependent::Meta::Role::Attribute;
+
 use strict;
 use warnings;
 use Moose::Role;

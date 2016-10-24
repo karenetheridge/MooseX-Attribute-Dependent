@@ -1,4 +1,5 @@
 package MooseX::Attribute::Dependency;
+
 use Moose;
 has [qw(parameters message constraint name)] => ( is => 'ro' );
 
@@ -30,6 +31,7 @@ sub register {
 __PACKAGE__->meta->make_immutable;
 
 package MooseX::Attribute::Dependencies;
+
 use strict;
 use warnings;
 use List::MoreUtils ();
