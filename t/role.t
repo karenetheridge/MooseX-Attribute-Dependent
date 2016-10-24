@@ -40,7 +40,7 @@ has plain => (is => 'ro');
 
 package main;
 
-diag 'mutable';
+note 'mutable';
 for(0..5) 
 {
     my $class = "All" . ( $_ % 3 + 1 );
@@ -50,7 +50,7 @@ for(0..5)
     lives_ok { $class->new() } 'empty new lives ok';
     my $foo = $class->new;
     throws_ok { $foo->street("foo") } qr/city/, 'works on accessor as well';
-    diag "making immutable" if($_ < 3);
+    note "making immutable" if($_ < 3);
     $class->meta->make_immutable;
 }
 
