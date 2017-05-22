@@ -48,6 +48,7 @@
 # Avoid MYMETA files
 ^MYMETA\.
 
+^MANIFEST\.SKIP$
 ^\.build$
 ^MooseX-Attribute-Dependent.*
 ^README\.md$
