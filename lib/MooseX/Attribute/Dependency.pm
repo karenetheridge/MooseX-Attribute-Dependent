@@ -34,14 +34,14 @@ package MooseX::Attribute::Dependencies;
 
 use strict;
 use warnings;
-use List::MoreUtils ();
+use List::Util 1.33 ();
 
 MooseX::Attribute::Dependency::register(
     {   name       => 'All',
         message    => 'The following attributes are required: %s',
         constraint => sub {
             my ( $attr_name, $params, @related ) = @_;
-            return List::MoreUtils::all { exists $params->{$_} } @related;
+            return List::Util::all { exists $params->{$_} } @related;
             }
     }
 );
@@ -51,7 +51,7 @@ MooseX::Attribute::Dependency::register(
         message => 'At least one of the following attributes is required: %s',
         constraint => sub {
             my ( $attr_name, $params, @related ) = @_;
-            return List::MoreUtils::any { exists $params->{$_} } @related;
+            return List::Util::any { exists $params->{$_} } @related;
             }
     }
 );
@@ -61,7 +61,7 @@ MooseX::Attribute::Dependency::register(
         message    => 'None of the following attributes can have a value: %s',
         constraint => sub {
             my ( $attr_name, $params, @related ) = @_;
-            return List::MoreUtils::none { exists $params->{$_} } @related;
+            return List::Util::none { exists $params->{$_} } @related;
             }
     }
 );
@@ -72,7 +72,7 @@ MooseX::Attribute::Dependency::register(
             'At least one of the following attributes cannot have a value: %s',
         constraint => sub {
             my ( $attr_name, $params, @related ) = @_;
-            return List::MoreUtils::notall { exists $params->{$_} } @related;
+            return List::Util::notall { exists $params->{$_} } @related;
             }
     }
 );
