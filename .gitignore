@@ -1,4 +1,5 @@
 .DS_Store
+*.bak
 README.mkdn
 \.build/
 MooseX-Attribute-Dependent-[0-9.]*
