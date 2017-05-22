@@ -1,4 +1,5 @@
 {{$NEXT}}
+  - Switch from List::MoreUtils to List::Util which is in core. (Karen Etheridge)
 
 1.1.3 - 2016-10-24
   - fix breakage with recent Moose > 2.1700 dues to removal of List::MoreUtils
